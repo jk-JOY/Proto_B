@@ -4,14 +4,20 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class JoystickMove : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
-{ 
+{
+    private static readonly int WALK_PROPERTY = Animator.StringToHash("Walk");
+
+
     public RectTransform pad;
     public RectTransform stick;
 
     public Transform player;
     private Vector3 input;
     public float playerSpeed;
+    public Animator anim = null;
+    public SpriteRenderer SR = null;
 
+  
     public void OnDrag(PointerEventData eventData)
     {
         stick.position = eventData.position;
@@ -19,6 +25,15 @@ public class JoystickMove : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
             Vector2.ClampMagnitude(eventData.position -
                                    (Vector2)pad.position, pad.rect.width * 0.5f);
         input = new Vector3(stick.localPosition.x, 0, stick.localPosition.y).normalized;
+        //if(stick.localPosition.x == 1)
+        //{
+        //    SR.flipX = false;
+        //}
+        //else if(stick.localPosition.y == -1)
+        //{
+        //    SR.flipY = true;
+        //}
+        //anim.SetBool(WALK_PROPERTY, Mathf.Abs(input.sqrMagnitude) > Mathf.Epsilon);
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -41,8 +56,6 @@ public class JoystickMove : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         while (true)
         {
             player.Translate(input * playerSpeed * Time.deltaTime, Space.World);
-            //if(input != Vector3.zero)
-            //    player.rotation = Quaternion.Slerp(player.rotation,Quaternion.LookRotation(input), 5* Time.deltaTime);
             yield return null;
         }
     }

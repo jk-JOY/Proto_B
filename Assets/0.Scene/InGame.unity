@@ -151,7 +151,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &57864483
 PrefabInstance:
@@ -516,7 +516,7 @@ Transform:
   - {fileID: 1571637451}
   - {fileID: 1630301940}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &424761197
 GameObject:
@@ -836,6 +836,8 @@ MonoBehaviour:
   stick: {fileID: 1279362794}
   player: {fileID: 427017388}
   playerSpeed: 5
+  anim: {fileID: 1123275052}
+  SR: {fileID: 1123275053}
 --- !u!1 &473769299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,11 +1079,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502422648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -399.182, y: -112.28113, z: 31.624512}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 11}
   m_Children: []
-  m_Father: {fileID: 1025510890}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &575038405
 PrefabInstance:
@@ -1611,7 +1613,7 @@ RectTransform:
   - {fileID: 1279454862}
   - {fileID: 449730085}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1908,11 +1910,22 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 399.182, y: 112.28113, z: -31.624512}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 502422652}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1123275052 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3017691585687792391, guid: 571a45515f3d34aa1b1ac434747d4f3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 427017387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1123275053 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3017691585687792390, guid: 571a45515f3d34aa1b1ac434747d4f3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 427017387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1279281350
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2615,7 +2628,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1923069108
 PrefabInstance:
